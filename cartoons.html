@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script src=jquery-2.2.0.js></script>
+    <script src=jquery.imagemapster.js></script>
+
+<style>
+h3 {
+    font-family: serif;
+}
+
+#header {
+    height: 100px;
+}
+
+#puck_puzzle {
+  width:800px;
+  height:596px;
+}
+#selections {
+ position: absolute;
+    right: 30px;
+    font-family: garamond;
+    padding: 30px;
+    padding-top: 0px;
+    width: 100%;
+    height: 100%;
+    left: 64%;
+}
+
+#opening {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: garamond;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: garamond;
+    font-size: 80px;
+    text-align: center;
+}
+
+/*.first {
+    margin-left:1%;
+}*/
+
+
+</style>
+</head>
+<body>
+<h1>Interactive Political Cartoons</h1>
+<p id="opening">Gilded Age political cartoons were widely influential works of art and satire that crtitiqued politicians, industrialists, and the corruption between the two. While the cartoons themselves have been digitized, the rich 'inside baseball' references are oftentimes lost to 21st century observers. I have created a program that allows users to hover over segments of these cartoons and see contextual descriptions of what they're viewing. That could mean an explanation of a person, a fad, or a reference in the cartoon. </br></br>The cartoon below is a case in point. It shows a political boss trying to maneuver his favorite candidate into the presidency. But it also makes reference to the newly-created sliding puzzle (then called the 15 puzzle), which in 1880 was taking the nation by storm. Hover over the cartoon to understand what you're viewing. Please note that this is a work in progress. It is not optimized for mobile viewing, and the page should be viewed at the monitor's full capacity for optimal viewing. </p>
+
+<div class="first" style="width: 370px; height: 500px; border: 4px solid #336699; border-radius: 25px; background: url(images/paper.gif);" id="selections"></div>
+<div>
+<img id="puck_puzzle" class="first" src="images/puckbosspuzzle.jpg" usemap="#cartoon">
+<map id="cartoon_map" name="cartoon" class="first">
+    <area shape="poly" name="Conkling" coords="143,138,132,165,128,169,128,177,122,187,112,212,104,233,98,244,90,257,77,270,61,288,51,301,38,333,29,358,20,401,17,433,16,462,27,468,34,471,36,479,69,483,82,478,85,485,79,493,66,515,56,538,53,555,48,562,100,564,131,503,113,539,138,499,141,540,185,500,252,454,262,443,273,420,255,400,267,407,269,414,228,381,254,396,223,377,198,361,176,348,172,338,166,332,162,308,190,293,205,280,221,276,232,260,261,277,287,286,312,295,330,299,355,305,364,305,366,314,386,306,378,291,413,306,418,298,403,280,380,271,345,272,327,263,307,248,319,211,317,203,312,200,312,190,303,180,327,152,332,147,331,121,322,105,317,92,322,87,307,73,292,65,277,54,270,55,256,48,237,56,218,67,203,75,198,89,201,107,218,130,201,139,187,130,168,128" href="#">
+    <area shape="poly" name="Bayard" coords="545,140,541,159,545,169,533,185,513,194,505,194,494,188,488,175,482,162,477,151,473,137,473,125,479,111,494,104,510,101,532,109,540,112,544,124" href="#">
+    <area shape="poly" name="Grant" coords="460,181,438,190,426,199,424,212,423,225,426,236,430,247,435,258,440,269,437,275,446,286,462,288,480,285,494,276,502,264,509,257,507,238,507,224,504,203,489,185,497,190,480,181,451,182" href="#">
+    <area shape="poly" name="Butler" coords="423,145,420,133,407,126,398,114,390,106,376,101,363,102,349,108,342,117,336,126,335,136,336,149,342,156,343,170,349,180,371,186,394,178,408,164" href="#">
+    <area shape="poly" name="Washburne" coords="664,91,660,84,660,77,659,69,658,59,663,50,670,42,677,37,685,32,699,32,710,35,723,45,729,60,736,67,734,85,731,94,726,102,716,115,694,120,679,107,672,106" href="#">
+    <area shape="poly" name="Thurman" coords="401,36,415,35,430,39,439,45,443,60,452,58,457,71,447,76,445,85,443,98,439,104,433,104,423,116,410,121,398,109,395,93,390,83,383,88,380,84,381,75,381,67,384,57" href="#">
+    <area shape="poly" name="Tilden" coords="581,213,587,206,587,203,595,196,608,186,626,187,644,191,658,199,668,211,668,221,671,231,669,236,669,243,668,251,667,269,658,281,664,277,641,294,626,297,604,296,598,280,591,271,588,258,580,245" href="#">
+    <area shape="poly" name="jewett" coords="309,182,319,180,334,185,346,198,353,210,353,224,353,234,352,248,342,256,335,264,334,267,326,264,310,248,320,208,312,199" href="#">
+    <area shape="poly" name="Train" coords="542,33,568,34,583,44,591,59,595,78,587,89,584,99,577,108,576,116,566,122,545,123,539,113,536,105,532,104,527,86,522,74,516,66,521,54,521,50" href="#">
+ <area shape="poly" name="puzzle" coords="353,420,505,437,519,490,375,472" href="#">
+  <area shape="poly" name="Davis" coords="613,129,620,122,626,113,641,105,658,102,677,106,689,115,697,138,695,145,692,154,699,170,691,187,682,194,672,202,665,205,660,199,645,193,632,191,625,172,622,162,617,159,615,135" href="#">
+  <area shape="poly" name="Blaine" coords="384,271,401,281,418,297,418,304,416,309,390,300,387,303,386,310,380,315,369,316,360,313,357,313,358,327,360,337,365,346,374,374,380,392,380,400,390,406,413,405,420,396,437,379,448,363,446,345,445,331,452,316,442,301,435,288,431,276,409,267,393,264" href="#">
+   <area shape="poly" name="Sherman" coords="207,282,201,293,198,307,201,326,212,343,217,359,225,376,249,375,266,367,279,353,285,338,282,326,288,311,279,287,258,276,236,263,227,271,219,282,210,279" href="#">
+
+</map>
+</div>
+
+  <script src="jquery-2.2.0.js"></script>
+
+   <script src="jquery.imagemapster.js"></script>
+
+ <script>
+
+   // a cross reference of area names to text to be shown for each area
+    var xref = {
+        Grant:"<h2><b>Ulysses S. Grant</b></h2><img src='images/grant.png' height='182' width='340' /img><br></br> He'd been President twice before, and in 1880 Grant was trying to make history with a third term. The GOP establishment, most notably Roscoe Conkling (the centerpiece of this cartoon) desperately wanted him to be nominated. But this was a crowded field (just look at all the other candidates around Grant), and many people were turned off by the arrogance of a third term. Thus, in this cartoon, Grant needs the bosses to ease his road to the winning spot and the White House.",
+        Butler: "<h2><b>Benjamin Butler</b></h2><img src='images/butler.png' height='220' width='340' /img><br></br>  Butler had supporters across the political spectrum—he was often said to be 'a member of all parties and false to each'—and was considered a presidential possibility when the Greenbackers convened in Chicago in 1880.",
+        Washburne: "<h2><b>Elihu Washburne</b></h2><img src='images/washburne.png' height='240' width='340'  /img><br></br>President Grant's ambassador to France had retired from government by 1880, but some still favored his nomination.",
+        Conkling: "<h2><b>Roscoe Conkling</b></h2><img src='images/conkling.jpg' height='225' width='340' /img><br></br>A tough New Yorker and Republican political boss, Roscoe Conkling desperately wanted Ulysses Grant to become president in 1880. A Grant win would secure him power, and potentially a powerful appointment. In this cartoon, Conkling is puzzling over a way to move Grant into the presidency. His hand rests on James G. Blaine, a contender of a candidate, who Conkling personally hated. Hover over Blaine or Grant, the frontrunners, to find out more about these candidates."
+            ,
+        Thurman: "<h2><b>Allen G. Thurman</b></h2><img src='images/thurman.png' height='265' width='340' /img><br></br>A Conservative Democrat from the swing state of Ohio (then and always a swing state...), Thurman led the Ohio Democratic delegation. He was also considered one of the best mathematicians in Ohio. Unlike the actual 1880 Democratic nominee (Winfield Scott), Thurman made it into this cartoon. But he didn't come close at the convention.",
+        Bayard: "<h2><b>Thomas F. Bayard</b></h2><img src='images/bayard.png' height='241' width='340' /img><br></br> Bayard was a Conservative Delaware Democratic with a strong record of supporting the Southern States (he thought they should be able to seceded peacefully). He was a contendor for the 1880 nomination, and ended up finishing second.",
+        Blaine: "<h2><b>James G. Blaine</b></h2><img src='images/blaine.jpeg' height='200' width='290' /img><br></br>A respected and well-liked Republican Party elder, James G. Blaine had almost become president in 1876, before Roscoe Conkling, the political boss touching Blaine's head in this cartoon, sabotaged him. In 1880, Blaine was considered a frontrunner to become president, which is why the cartoon places him so close to the 'winning' slot in the bottom right. It seemed that only Ulysses S. Grant, maneuvered into power by the boss Roscoe Conkling, could stop Blaine. Hover over Grant or Conkling to find out more about these Republican Party heavyweights.",
+        Tilden: "<h2><b>Samuel J. Tilden</b></h2><img src='images/tilden.png' height='226' width='340' /img><br></br>This Democrat from the swing state of New York (whaat?) came extremely close to becoming President in 1876, losing in a compromise that many saw as a corrupt deal. So he was considered the favorite to run again in 1880. That's likely why the cartoonist put Tilden just one square away from winning the presidency (the bottom left slot), indicating his prominence. Tilden didn't end up running.",
+        jewett: "<h2><b>Hugh S. Jewett</b></h2><img src='images/jewett.jpg' height='182' width='340' /img><br></br>A railroad executive with a small following, Hugh Jewett had basically no chance of becoming President. The cartoonist must have needed slots to fill his puzzle (yet he didn't include the eventual winner of the presidency, James Garfield). For some real 1880 contendors, hover over Grant or Blaine.",
+        Sherman: "<h2><b>John Sherman</b></h2><img src='images/sherman.jpg' height='182' width='340' /img><br></br>A Treasury Secretary with solid economic credentials, John Sherman was also so cold and lacking in charisma that he was known as the icicle. Three months after this cartoon was published, James Garfield got up to nominate 'the icicle' at the contested GOP convention. Garfield's rousing speech barely mentioned Sherman, and it was Garield, not Sherman, who got the nomination and became President. Little wonder Sherman is so far from the winning bottom-right slot in this cartoon.",
+        puzzle: "<h2><b>The 15 Puzzle</b></h2>The cartoon references the sliding puzzle, which had recently been invented and was all the rage in 1880. Check out this contemporary report: <br></br><img src='images/puzzle.png' height='354' width='360' /img>",
+        Train: "<h2><b>Who is Train?</b></h2><img src='images/train.png' height='182' width='340' /img><br></br>I don't know who train is. Hover elsewhere.",
+        Davis: "<h2><b>David Davis</b></h2><img src='images/davis.jpg' height='230' width='340' /img><br></br>This guy was on the Supreme Court, left the Supreme Court to become an Independent Senator, and nearly decided the 1876 election single-handedly. He was a natural underdog to run in 1880, but it didn't pan out."
+    };
+    
+    var defaultDipTooltip = ' ';
+    
+    var image = $('#puck_puzzle');
+
+    image.mapster(
+    {
+        fillOpacity: 0.4,
+        fillColor: "ffffff",
+        stroke: false,
+        strokeColor: "3320FF",
+        strokeOpacity: 0.8,
+        strokeWidth: 4,
+        singleSelect: true,
+        mapKey: 'name',
+        listKey: 'name',
+        onMouseover: function (e) {
+            var newToolTip = defaultDipTooltip;
+            
+            // update text depending on area selected
+            $('#selections').html(xref[e.key]);
+            
+            // if Asparagus selected, change the tooltip
+            if (e.key === 'asparagus') 
+            image.mapster('set_options', { 
+                areas: [{
+                    key: "dip",
+                    toolTip: newToolTip
+                    }]
+                });
+        },
+        showToolTip: true,
+        toolTipClose: ["tooltip-click", "area-click"],
+        areas: [
+            {
+                key: "Conkling",
+                fillColor: "ffffff"
+            },
+            {
+                key: "Thurman",
+                fillColor: "ffffff"
+            },
+            {
+                key: "Grant",
+                fillColor: "ffffff"
+            },
+            {
+                key: "Butler",
+                strokeColor: "ffffff"
+            }
+            ]
+    });
+    </script>
+
