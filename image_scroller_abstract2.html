@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historical Cartoon Image Scroller</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="sample_info.js"></script>
+  <script src="pageCreator.js"></script>
+  <link rel="stylesheet" type="text/css" href="image_scroller_styles.css"></link>
+  <body>
+    <div id="navbar">
+      <img id="logo" src="images/puckmast.jpg"></img>
+      <div id="title"> <div class="nav_icon" id="previous"><&nbsp</div><div id="project_title"></div><div class="nav_icon" id="next">&nbsp></div> </div>
+      <div id="link_back">About</div>
+    </div>
+    <div id="navbar_mobile">
+      <img id="logo" src="images/puckmast.jpg"></img>
+      <div id="title_mobile"> <div class="nav_icon" id="previous"><&nbsp</div><div id="project_title"></div><div class="nav_icon" id="next">&nbsp></div> </div>
+      <div id="link_back">About</div>
+    </div>
+    <div id="lead_image">
+      <div id="scroll_intro"><div id="scroll_background">Scroll down to begin</div></div>
+    </div>
+    <div id="images">
+      <!-- <img id="img1" class="img current" src="images/lead_image.png"> -->
+    </div>
+
+    <div id="mobile_block"></div>
+    <div id="text_scroller"></div>
+  </body>
+  <script>
+    imageCreator(sampleInfo1)
+    textBlockCreator(sampleInfo1)
+  </script>
+
+  <script src="imageSwapper.js"></script>
+</html>
